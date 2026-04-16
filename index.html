@@ -140,7 +140,7 @@
         <div class="container">
             <h2>Location</h2>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/place/Shri+Lakshmi+Venkataramana+Swamy+Temple+(Ronuru)/@13.3942462,78.2470057,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb20c580582b83d:0xcfae056673d49067!8m2!3d13.3942462!4d78.2470057!16s%2Fg%2F1ydpvbjx7!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881.2918549926285!2d78.2470057!3d13.3942462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb20c580582b83d%3A0xcfae056673d49067!2sShri%20Lakshmi%20Venkataramana%20Swamy%20Temple%20(Ronuru)!5e0!3m2!1sen!2sin!4v1776357064053!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="venue-details">
                 <h3>RONUR</h3>
@@ -163,7 +163,18 @@
         </div>
     </footer>
 
-    <audio id="background-music" src="audio/edited.mp3" loop preload="auto"></audio>
+    <audio id="background-music" src="edited.mp3" loop preload="auto"></audio>
+    
+<button id="music-toggle">🎵</button>
+
+<script>
+const music = document.getElementById("background-music");
+const btn = document.getElementById("music-toggle");
+
+btn.onclick = () => {
+    music.paused ? music.play() : music.pause();
+};
+</script>
 
     <script src="script.js"></script>
 </body>
